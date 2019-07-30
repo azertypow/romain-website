@@ -1,0 +1,16 @@
+.r-text-container {
+  @include font-project--reg;
+  margin: 0;
+
+  h2 {
+    @include font-project--l;
+  }
+
+  p {
+    @include font-project--reg;
+  }
+}
+
+.r-font-is-uppercase {
+  text-transform: uppercase !important;
+}

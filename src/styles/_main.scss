@@ -1,0 +1,25 @@
+@import "params";
+
+@import "full-page";
+
+@import "font-loader";
+@import "init";
+@import "grid";
+@import "text";
+@import "ui";
+@import "elements";
+
+
+.fp-slidesNav.fp-bottom {
+  display: flex;
+  justify-content: center;
+  mix-blend-mode: difference;
+}
+
+#fp-nav ul li a span, .fp-slidesNav ul li a span {
+  background: white;
+}
+
+.fp-controlArrow {
+  display: none !important;
+}

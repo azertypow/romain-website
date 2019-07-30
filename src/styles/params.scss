@@ -1,0 +1,35 @@
+$gutter-width: 30px;
+
+$font-size-global--reg:         5rem;
+$font-line-height-global--reg:  6rem;
+
+@mixin font-global--reg {
+  font-size: $font-size-global--reg;
+  line-height: $font-line-height-global--reg;
+  font-weight: 400;
+  margin-top: $font-line-height-global--reg;
+  margin-bottom: $font-line-height-global--reg;
+  text-transform: uppercase;
+}
+
+@mixin font-global--l {
+  text-transform: uppercase;
+}
+
+@mixin font-project--reg {
+  font-size: $font-size-global--reg;
+  line-height: $font-line-height-global--reg;
+  font-weight: 400;
+  margin-top: $font-line-height-global--reg;
+  margin-bottom: $font-line-height-global--reg;
+  text-transform: none;
+}
+
+@mixin font-project--l {
+  font-weight:    500;
+  font-size:      $font-size-global--reg        * 3;
+  line-height:    $font-line-height-global--reg * 3;
+  margin-top:     $font-line-height-global--reg * 3;
+  margin-bottom:  $font-line-height-global--reg * 3;
+  text-transform: none;
+}

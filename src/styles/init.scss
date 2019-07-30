@@ -1,0 +1,24 @@
+body, html {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 5px;
+}
+
+body {
+  font-size: $font-size-global--reg;
+  line-height: $font-line-height-global--reg;
+  font-family: "appFont", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h2 {
+  @include font-global--l;
+}
+
+p {
+  @include font-global--reg;
+}
