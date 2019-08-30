@@ -14,7 +14,8 @@
 .fp-slidesNav.fp-bottom {
   display: flex;
   justify-content: center;
-  mix-blend-mode: difference;
+  //mix-blend-mode: difference;
+  bottom: 1rem;
 }
 
 #fp-nav ul li a span, .fp-slidesNav ul li a span {
@@ -23,4 +24,22 @@
 
 .fp-controlArrow {
   display: none !important;
+}
+
+.fp-slidesNav ul li a span {
+  height: 12px !important;
+  width: 12px !important;
+  margin: -6px 0 0 -6px !important;
+  border-radius: 100%;
+  border: solid 1px white;
+  background-color: transparent;
+  box-sizing: border-box;
+}
+
+.fp-slidesNav ul li a.active span {
+  background-color: white;
+}
+
+.show-title +.fp-slidesNav.fp-bottom {
+  display: none;
 }

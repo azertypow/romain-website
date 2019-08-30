@@ -1,82 +1,110 @@
 <template>
-    <div id="app" ref="app">
+    <div>
 
-        <!--    INTRO-->
+        <div id="app" ref="app">
 
-        <fullpage-section class="active">
+            <!--    INTRO-->
 
-            <r-intro v-if="this.$intro" :introData="this.$intro"></r-intro>
+            <fullpage-section class="active no-arrow">
 
-            <div class="r-next-slide" @click="nextSection"><span>next section</span><span>FEATURED PROJECTS</span></div>
+                <r-intro v-if="this.$intro" :introData="this.$intro"></r-intro>
 
-        </fullpage-section>
+                <div class="r-next-slide" @click="nextSection"><div class="r-fotter-next-section-arrow"></div><span>FEATURED PROJECTS</span></div>
 
-        <!--    PROJECTS-->
+            </fullpage-section>
 
-        <fullpage-section v-if="$arrayOfProject"
-                          v-bind:key="'project' + index"
-                          class="r-section-project"
-                          v-for="(project, index) of $arrayOfProject">
+            <!--    PROJECTS-->
 
-            <div class="r-text-container">
+            <fullpage-section v-if="$arrayOfProject"
+                              v-bind:key="'project' + index"
+                              class="r-section-project r-has-background-black"
+                              v-for="(project, index) of $arrayOfProject">
+
                 <h2 class="r-section-project__title">{{project.title}}</h2>
 
-                <div class="r-section-project__desc">{{project.text}}</div>
-            </div>
+                <div class="r-section-project__details">
 
-            <fullpage-slide v-bind:key="index + 'imageUrl' + secondIndex"
-                            v-for="(imageUrl, secondIndex) of project.arrayOfImageUrl">
-                <img :src="`/img/${imageUrl}`"
-                     :alt="`image ${imageUrl}`"
-                     class="r-section-project__image">
-            </fullpage-slide>
+                    <div class="r-section-project__details__left">
+                        <h2 class="r-section-project__details__title">{{project.title}}</h2>
+                        <p>
+                            <span class="r-section-project__details__subtitle">{{project.subtitle}}</span>
+                            &nbsp;
+                            <span class="r-section-project__details__date">{{project.date}}</span>
+                        </p>
+                    </div>
 
-        </fullpage-section>
-
-        <!--    CV SECTION-->
-
-        <fullpage-section v-if="$arrayOfCvSection">
-
-            <div class="r-section-cv">
-
-                <div class="r-scaling-height">
-                    <div class="r-scaling-height__child"
-                         ref="contentScalingOnScreenHeight">
-
-                        <div class="r-section-cv__item"
-                             v-for="(cvSection, index) of $arrayOfCvSection">
-
-                            <h4 class="r-section-cv__item__title r-font-is-uppercase r-font-l">{{cvSection.title}}</h4>
-
-                            <ul class="r-section-cv__item__list r-list">
-                                <li class="r-list__item r-list__item--with-line"
-                                    v-for="project of cvSection.arrayOfProject">
-                                    <a class="r-link-no-style" :href="project.url">{{project.name}}</a>
-                                </li>
-                            </ul>
-
-                        </div>
-
+                    <div class="r-section-project__details__right">
+                        <div class="r-section-project__details__desc" v-html="project.text"></div>
                     </div>
                 </div>
 
-            </div>
+                <fullpage-slide v-bind:key="index + 'imageUrl' + secondIndex"
+                                v-for="(imageUrl, secondIndex) of project.arrayOfImageUrl">
+                    <img :src="`/img/${imageUrl}`"
+                         :alt="`image ${imageUrl}`"
+                         class="r-section-project__image">
+                </fullpage-slide>
 
-            <div class="r-next-slide" @click="nextSection"><span>next section</span><span>ARCHIVES</span></div>
+            </fullpage-section>
 
-        </fullpage-section>
+            <!--    CV SECTION-->
 
-        <!--    ARcHIVE-->
+            <fullpage-section v-if="$arrayOfCvSection" class="no-arrow">
 
-        <fullpage-section v-if="$arrayOfArchive"
-                          v-bind:key="'archive' + index"
-                          v-for="(archive, index) of $arrayOfArchive">
+                <div class="r-section-cv">
 
-            <div>{{archive.imageUrl}}</div>
-            <div>{{archive.date}}</div>
-            <div>{{archive.title}}</div>
+                    <div class="r-scaling-height">
+                        <div class="r-scaling-height__child"
+                             ref="contentScalingOnScreenHeight">
 
-        </fullpage-section>
+                            <div class="r-section-cv__item"
+                                 v-for="(cvSection, index) of $arrayOfCvSection">
+
+                                <h4 class="r-section-cv__item__title r-font-is-uppercase r-font-l">{{cvSection.title}}</h4>
+
+                                <ul class="r-section-cv__item__list r-list">
+                                    <li class="r-list__item r-list__item--with-line"
+                                        v-for="project of cvSection.arrayOfProject">
+                                        <a class="r-link-no-style" :href="project.url">{{project.name}}</a>
+                                    </li>
+                                </ul>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="r-next-slide" @click="nextSection"><div class="r-fotter-next-section-arrow"></div><span>ARCHIVES</span></div>
+
+            </fullpage-section>
+
+            <!--    ARcHIVE-->
+
+            <fullpage-section v-if="$arrayOfArchive"
+                              class="no-arrow r-archive-section">
+
+                <div class="r-archive__item-box">
+
+                    <archive-item v-bind:key="'archive' + index"
+                                  v-for="(archive, index) of $arrayOfArchive"
+                                  :archiveData="archive"
+                    ></archive-item>
+
+                </div>
+
+
+            </fullpage-section>
+
+        </div>
+
+        <div class="r-next-slide r-next-slide--special-archives" >
+            <a>GIT</a>
+            <a>IG</a>
+            <a>MAIL</a>
+            <a class="r-arena-logo"><img class="r-list-nav__icon" src="./assets/star.png" alt="icon star"></a>
+            <span>THANKS</span></div>
 
     </div>
 </template>
@@ -89,9 +117,11 @@
   import RIntro from "@/components/RIntro.vue"
   import FullpageSlide from "@/components/FullpageSlide.vue"
   import {setScalingOfHtmlElementOnHeightOfHisParent} from "@/setScalingOfHtmlElementOnHeightOfHisParent"
+  import ArchiveItem from "@/components/ArchiveItem.vue"
 
   @Component({
     components: {
+      ArchiveItem,
       FullpageSlide,
       RIntro,
       FullpageSection,
@@ -112,6 +142,7 @@
                 autoScrolling: true,
                 slidesNavigation: true,
                 scrollOverflow: true,
+                dragAndMove: true,
               });
 
               this.$store.commit("setFullPageInstance", fullPageInstance)

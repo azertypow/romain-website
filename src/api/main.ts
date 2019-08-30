@@ -36,6 +36,8 @@ export interface IJsonDataIntro {
 export interface IJsonDataProject {
   "title":            string
   "text":             string
+  "subtitle":         string
+  "date":             string
   "arrayOfImageUrl":  string[]
 }
 
@@ -51,4 +53,5 @@ export interface IJsonDataArchive {
   "imageUrl":         string
   "date":             string
   "title":            string
+  "description":      string
 }

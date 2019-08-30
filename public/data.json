@@ -5,8 +5,10 @@
 
   "arrayOfProject": [
     {
-      "title":            "BodySynth BS.01",
-      "text":             "French designer living in geneva, switzerland. in recent years, his research and experimentation was turned around the electronic lutherie. his instruments and tools, beyond necessarily serving already established musicians attempt instead to bridge the gap between science, society or technology and the viewer user. thus the use of a musical environment and instrument-tool acts as a mediator between the human who participates in these experiences and the subject explored.",
+      "title":            "BS.01",
+      "subtitle":         "Motion Musical Composition",
+      "date":             "march 2019",
+      "text":             "<p>French designer living in geneva, switzerland. in recent years, his research and experimentation was turned around the electronic lutherie. his instruments and tools, beyond necessarily serving already established musicians attempt instead to bridge the gap between science, society or technology and the viewer user. thus the use of a musical environment and instrument-tool acts as a mediator between the human who participates in these experiences and the subject explored.</p>",
       "arrayOfImageUrl":  [
         "BS/BS1.jpg",
         "BS/BS2.jpg",
@@ -16,7 +18,9 @@
     },
     {
       "title":            "GCS.01",
-      "text":             "text du projet",
+      "subtitle":         "Motion Musical Composition",
+      "date":             "march 2019",
+      "text":             "<p>text du projet</p>",
       "arrayOfImageUrl":  [
         "GCS/GCS1.jpg",
         "GCS/GCS2.jpg",
@@ -26,7 +30,9 @@
     },
     {
       "title":            "MF.01c",
-      "text":             "text du projet",
+      "subtitle":         "Motion Musical Composition",
+      "date":             "march 2019",
+      "text":             "<p>text du projet</p>",
       "arrayOfImageUrl":  [
         "SP/SP1.jpg",
         "SP/SP2.jpg",
@@ -120,19 +126,240 @@
 
   "arrayOfArchive": [
     {
-      "imageUrl":         "url",
-      "date":             "18 janvier",
-      "title":            "titre archive"
-    },
-    {
-      "imageUrl":         "url",
-      "date":             "20 avril",
-      "title":            "titre autre"
-    },
-    {
-      "imageUrl":         "url",
+      "imageUrl":         "archives/1.jpg",
       "date":             "18 mars",
-      "title":            "bla blabla"
+      "title":            "bla blabla",
+      "description":      "description"
+    },
+    {
+      "imageUrl":         "archives/2.jpg",
+      "date":             "18 mars",
+      "title":            "bla blabla",
+      "description":      "description"
+    },
+    {
+      "imageUrl":         "archives/3.jpg",
+      "date":             "18 mars",
+      "title":            "bla blabla",
+      "description":      "description"
+    },
+    {
+      "imageUrl":         "archives/4.jpg",
+      "date":             "18 mars",
+      "title":            "bla blabla",
+      "description":      "description"
+    },
+    {
+      "imageUrl":         "archives/5.jpg",
+      "date":             "18 mars",
+      "title":            "bla blabla",
+      "description":      "description"
+    },
+    {
+      "imageUrl":         "archives/6.jpg",
+      "date":             "18 mars",
+      "title":            "bla blabla",
+      "description":      "description"
+    },
+    {
+      "imageUrl":         "archives/7.jpg",
+      "date":             "18 mars",
+      "title":            "bla blabla",
+      "description":      "description"
+    },
+    {
+      "imageUrl":         "archives/8.jpg",
+      "date":             "18 mars",
+      "title":            "bla blabla",
+      "description":      "description"
+    },
+    {
+      "imageUrl":         "archives/9.jpg",
+      "date":             "18 mars",
+      "title":            "bla blabla",
+      "description":      "description"
+    },
+    {
+      "imageUrl":         "archives/10.jpg",
+      "date":             "18 mars",
+      "title":            "bla blabla",
+      "description":      "description"
+    },
+    {
+      "imageUrl":         "archives/11.jpg",
+      "date":             "18 mars",
+      "title":            "bla blabla",
+      "description":      "description"
+    },
+    {
+      "imageUrl":         "archives/12.jpg",
+      "date":             "18 mars",
+      "title":            "bla blabla",
+      "description":      "description"
+    },
+    {
+      "imageUrl":         "archives/13.jpg",
+      "date":             "18 mars",
+      "title":            "bla blabla",
+      "description":      "description"
+    },
+    {
+      "imageUrl":         "archives/14.jpg",
+      "date":             "18 mars",
+      "title":            "bla blabla",
+      "description":      "description"
+    },
+    {
+      "imageUrl":         "archives/15.jpg",
+      "date":             "18 mars",
+      "title":            "bla blabla",
+      "description":      "description"
+    },
+    {
+      "imageUrl":         "archives/16.jpg",
+      "date":             "18 mars",
+      "title":            "bla blabla",
+      "description":      "description"
+    },
+    {
+      "imageUrl":         "archives/17.jpg",
+      "date":             "18 mars",
+      "title":            "bla blabla",
+      "description":      "description"
+    },
+    {
+      "imageUrl":         "archives/18.jpg",
+      "date":             "18 mars",
+      "title":            "bla blabla",
+      "description":      "description"
+    },
+    {
+      "imageUrl":         "archives/19.jpg",
+      "date":             "18 mars",
+      "title":            "bla blabla",
+      "description":      "description"
+    },
+    {
+      "imageUrl":         "archives/20.jpg",
+      "date":             "18 mars",
+      "title":            "bla blabla",
+      "description":      "description"
+    },
+    {
+      "imageUrl":         "archives/21.jpg",
+      "date":             "18 mars",
+      "title":            "bla blabla",
+      "description":      "description"
+    },
+    {
+      "imageUrl":         "archives/22.jpg",
+      "date":             "18 mars",
+      "title":            "bla blabla",
+      "description":      "description"
+    },
+    {
+      "imageUrl":         "archives/23.jpg",
+      "date":             "18 mars",
+      "title":            "bla blabla",
+      "description":      "description"
+    },
+    {
+      "imageUrl":         "archives/24.jpg",
+      "date":             "18 mars",
+      "title":            "bla blabla",
+      "description":      "description"
+    },
+    {
+      "imageUrl":         "archives/25.jpg",
+      "date":             "18 mars",
+      "title":            "bla blabla",
+      "description":      "description"
+    },
+    {
+      "imageUrl":         "archives/26.jpg",
+      "date":             "18 mars",
+      "title":            "bla blabla",
+      "description":      "description"
+    },
+    {
+      "imageUrl":         "archives/27.jpg",
+      "date":             "18 mars",
+      "title":            "bla blabla",
+      "description":      "description"
+    },
+    {
+      "imageUrl":         "archives/28.jpg",
+      "date":             "18 mars",
+      "title":            "bla blabla",
+      "description":      "description"
+    },
+    {
+      "imageUrl":         "archives/29.jpg",
+      "date":             "18 mars",
+      "title":            "bla blabla",
+      "description":      "description"
+    },
+    {
+      "imageUrl":         "archives/30.jpg",
+      "date":             "18 mars",
+      "title":            "bla blabla",
+      "description":      "description"
+    },
+    {
+      "imageUrl":         "archives/31.jpg",
+      "date":             "18 mars",
+      "title":            "bla blabla",
+      "description":      "description"
+    },
+    {
+      "imageUrl":         "archives/32.jpg",
+      "date":             "18 mars",
+      "title":            "bla blabla",
+      "description":      "description"
+    },
+    {
+      "imageUrl":         "archives/33.jpg",
+      "date":             "18 mars",
+      "title":            "bla blabla",
+      "description":      "description"
+    },
+    {
+      "imageUrl":         "archives/34.jpg",
+      "date":             "18 mars",
+      "title":            "bla blabla",
+      "description":      "description"
+    },
+    {
+      "imageUrl":         "archives/35.jpg",
+      "date":             "18 mars",
+      "title":            "bla blabla",
+      "description":      "description"
+    },
+    {
+      "imageUrl":         "archives/36.jpg",
+      "date":             "18 mars",
+      "title":            "bla blabla",
+      "description":      "description"
+    },
+    {
+      "imageUrl":         "archives/37.jpg",
+      "date":             "18 mars",
+      "title":            "bla blabla",
+      "description":      "description"
+    },
+    {
+      "imageUrl":         "archives/38.jpg",
+      "date":             "18 mars",
+      "title":            "bla blabla",
+      "description":      "description"
+    },
+    {
+      "imageUrl":         "archives/39.jpg",
+      "date":             "18 mars",
+      "title":            "bla blabla",
+      "description":      "description"
     }
+
+
   ]
 }

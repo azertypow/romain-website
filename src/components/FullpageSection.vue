@@ -4,6 +4,7 @@
         <div :class="{'show-title': viewTitle}"
              class="v-fullpage-section__slot-container"
              @click="viewTitle = !viewTitle">
+            <div class="r-arrow"></div>
             <slot></slot>
         </div>
 

@@ -1,3 +1,8 @@
+.r-has-background-black {
+  background-color: black;
+}
+
+
 /**
   r-section-project
 **/
@@ -6,12 +11,11 @@
   position: relative;
 }
 
-.r-section-project__title,
-.r-section-project__desc {
+.r-section-project__title {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: $gutter-width;
+  left: $gutter-width;
+  //transform: translate(-50%, -50%);
   z-index: 10;
   color: white;
   user-select: none;
@@ -25,21 +29,90 @@
   object-fit: cover;
   width: 100%;
   height: 100%;
+  pointer-events: none;
+  user-select: none;
   transition: opacity 750ms;
   opacity: 1;
 }
 
-// .show-title permet d'afficher soit le titre soit le text desciprtif.
-// la class .show-title se met
-
 .r-section-project__title {
   display: block;
-  mix-blend-mode: overlay;
+  opacity: 1;
+  transition: opacity 250ms 150ms ease-in-out;
+  //mix-blend-mode: overlay;
 }
-.r-section-project__desc  {
-  display: none;
-  color: black;
+
+.r-section-project__details {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  z-index: 3;
+  pointer-events: none;
+  color: white;
+  transition: opacity 500ms ease-in-out;
+  opacity: 0;
 }
+
+.r-section-project__details__left,
+.r-section-project__details__right {
+  width: 50%;
+  padding: $gutter-width;
+  padding-bottom: $gutter-width * 2;
+}
+
+.r-section-project__details__left,
+.r-section-project__details__desc {
+  @include remove-margin-child;
+
+  font-size: 3.8vh;
+
+  > * {
+    text-transform: none;
+  }
+
+  h2 {
+    font-size: 6em;
+    line-height: 1em;
+    margin-top: .5em;
+    margin-bottom: 0;
+    position: relative;
+    left: -.06em;
+    font-weight: 600;
+  }
+
+  p {
+    font-size: 1em;
+    line-height: 1.2em;
+    margin-top: 0;
+    font-weight: 600;
+  }
+}
+
+.r-section-project__details__desc {
+  p {
+    text-align: justify;
+    hyphens: auto;
+  }
+}
+
+.r-section-project__details__subtitle {
+  font-weight: 500;
+  text-transform: none;
+  line-height: 0;
+}
+.r-section-project__details__date {
+  font-weight: 300;
+  text-transform: none;
+  white-space: nowrap;
+  line-height: 0;
+}
+
+// .show-title permet d'afficher soit le titre soit le text desciprtif.
+// la class .show-title se met
 
 .show-title {
   .r-section-project__image {
@@ -47,10 +120,12 @@
   }
 
   .r-section-project__title {
-    display: none
+    transition: opacity 250ms ease-in-out;
+    opacity: 0;
   }
-  .r-section-project__desc  {
-    display: block
+  .r-section-project__details  {
+    opacity: 1;
+    transition: opacity 750ms ease-in-out;
   }
 }
 
@@ -100,4 +175,17 @@
   margin-bottom: 0;
   transform: scale(1);
   transform-origin: top right;
+}
+
+.r-archive-section {
+  padding-bottom: $gutter-width--large;
+}
+
+.r-archive__item-box {
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  padding: 5px;
+  align-items: start;
+  justify-content: space-between;
 }
