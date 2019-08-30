@@ -19,11 +19,34 @@
   }
 }
 
+.r-justified-content {
+  text-align: justify;
+  hyphens: auto;
+}
+
 .r-container__large-text {
   display: block;
   width: calc(100% / 3 * 2);
   @include remove-margin-child;
   padding: $gutter-width;
+}
+
+.r-container__large-text--on-vh {
+  font-size: 3.5vh;
+
+  h2 {
+    font-size: 2em;
+    line-height: 1.2em;
+    margin-top: 1em;
+    margin-bottom: .5em;
+  }
+
+  p {
+    font-size: 1em;
+    line-height: 1.2em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
 }
 
 .r-container__right-column {

@@ -52,7 +52,7 @@
   background: white;
   z-index: 1000;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   height: 8rem;
   vertical-align: center;
   align-items: center;
@@ -60,6 +60,9 @@
   user-select: none;
   transition: transform 700ms ease;
   transform: translateY(calc(100vh + 100%));
+  box-sizing: border-box;
+  padding-left: $gutter-width;
+  padding-right: $gutter-width;
 
   > * {
     line-height: 200%;

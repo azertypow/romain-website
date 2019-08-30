@@ -1,7 +1,7 @@
 <template>
     <div class="v-r-intro r-container">
 
-        <div class="r-container__large-text"
+        <div class="r-container__large-text r-container__large-text--on-vh r-justified-content"
              v-html="this.introData.text"></div>
 
         <div class="r-container__right-column">
