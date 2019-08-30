@@ -103,6 +103,7 @@
                 navigation: true,
                 autoScrolling: true,
                 slidesNavigation: true,
+                scrollOverflow: true,
               });
 
               this.$store.commit("setFullPageInstance", fullPageInstance)
