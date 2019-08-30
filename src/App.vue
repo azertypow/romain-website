@@ -62,7 +62,7 @@
 
             </div>
 
-
+            <div class="r-next-slide" @click="nextSection"><span>next section</span><span>ARCHIVES</span></div>
 
         </fullpage-section>
 
