@@ -6,7 +6,7 @@
 
         <div class="r-container__right-column">
 
-            <a href="mailto:hello@romaintalou.fr" class="r-logo"><span class="r-logo__hello">HELLO @</span> ROMAIN<span style="letter-spacing: -.05em">&nbsp;</span>TALOU<br>
+            <a href="mailto:hello@romaintalou.fr" class="r-logo"><span class="r-font-l r-logo__hello">HELLO @</span> ROMAIN<span style="letter-spacing: -.05em">&nbsp;</span>TALOU<br>
                 .FR</a>
 
             <div>terre</div>

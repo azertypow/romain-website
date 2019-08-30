@@ -69,3 +69,15 @@
 .r-section-cv__item {
   @include remove-margin-child;
 }
+
+.r-section-cv__item + .r-section-cv__item {
+  margin-top: 5rem;
+}
+
+.r-section-cv__item__title {
+  margin: 0;
+}
+
+.r-section-cv__item__list {
+  margin-top: 0;
+}

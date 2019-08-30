@@ -42,12 +42,14 @@
                 <div class="r-section-cv__item"
                      v-for="(cvSection, index) of $arrayOfCvSection">
 
-                    <h4 class="r-font-is-uppercase">{{cvSection.title}}</h4>
+                    <h4 class="r-section-cv__item__title r-font-is-uppercase r-font-l">{{cvSection.title}}</h4>
 
-                    <div v-for="project of cvSection.arrayOfProject">
-                        <div>{{project.name}}</div>
-                        <div>{{project.url}}</div>
-                    </div>
+                    <ul class="r-section-cv__item__list r-list">
+                        <li class="r-list__item r-list__item--with-line"
+                            v-for="project of cvSection.arrayOfProject">
+                            <a class="r-link-no-style" :href="project.url">{{project.name}}</a>
+                        </li>
+                    </ul>
 
                 </div>
 
