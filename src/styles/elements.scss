@@ -13,19 +13,10 @@
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 10;
-  mix-blend-mode: overlay;
   color: white;
   user-select: none;
   margin: 0 !important;
   text-align: center;
-}
-
-.r-section-project__title {display: block}
-.r-section-project__desc  {display: none}
-
-.show-title {
-  .r-section-project__title {display: none}
-  .r-section-project__desc  {display: block}
 }
 
 .r-section-project__image {
@@ -34,8 +25,37 @@
   object-fit: cover;
   width: 100%;
   height: 100%;
+  transition: opacity 750ms;
+  opacity: 1;
 }
 
+// .show-title permet d'afficher soit le titre soit le text desciprtif.
+// la class .show-title se met
+
+.r-section-project__title {
+  display: block;
+  mix-blend-mode: overlay;
+}
+.r-section-project__desc  {
+  display: none;
+  color: black;
+}
+
+.show-title {
+  .r-section-project__image {
+    opacity: .5;
+  }
+
+  .r-section-project__title {
+    display: none
+  }
+  .r-section-project__desc  {
+    display: block
+  }
+}
+
+// fin --> .show-title permet d'afficher soit le titre soit le text desciprtif.
+// fin --> la class .show-title se met
 
 /**
   r-section-cv
