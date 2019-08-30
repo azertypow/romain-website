@@ -41,7 +41,7 @@
 
   "arrayOfCvSection": [
     {
-      "title":            "titre section cv",
+      "title":            "publications",
       "arrayOfProject": [
         {
           "name":         "nom de projet 1",
