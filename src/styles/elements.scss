@@ -61,6 +61,7 @@
   r-section-cv
 **/
 .r-section-cv {
+  box-sizing: border-box;
   text-align: right;
   min-height: 100vh;
   padding: $gutter-width;
