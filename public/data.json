@@ -44,37 +44,74 @@
       "title":            "publications",
       "arrayOfProject": [
         {
-          "name":         "nom de projet 1",
+          "name":         "CAL & L'experience de la musique [2019]",
           "url":          "google.com"
         },
         {
-          "name":         "nom de projet 2",
+          "name":         "I have seen the future [2018]",
+          "url":          "google.com"
+        },
+        {
+          "name":         "Open Design[2017]",
+          "url":          "google.com"
+        },
+        {
+          "name":         "Species Technica [2016]",
           "url":          "google.com"
         }
       ]
     },
     {
-      "title":            "titre autre section",
+      "title": "awards",
       "arrayOfProject": [
         {
-          "name":         "nom de projet 1",
+          "name":"Prix d’Excellence du Domaine Design HES-SO [2019]",
+          "url": "google.com"
+        },
+        {
+          "name":"Best Idea Contest, 1st prize, HES-SO [2018]",
+          "url": "google.com"
+        },
+        {
+          "name":"GENILEM 2nd prize, Geneve [2018]",
+          "url": "google.com"
+        },
+        {
+          "name":"Good100 List at GoodFestival, Lausanne [2018]",
+          "url": "google.com"
+        }
+      ]
+    },
+    {
+      "title":            "talks",
+      "arrayOfProject": [
+        {
+          "name":         "international congress 2019 – IDJ [2019]",
           "url":          "google.com"
         },
         {
-          "name":         "nom de projet 2",
+          "name":         "Brinc.io, Hong-Kong [2018]",
+          "url":          "google.com"
+        },
+        {
+          "name":         "x.factory - Chaihuo Maker Space,Shenzhen [2018]",
+          "url":          "google.com"
+        },
+        {
+          "name":         "HKUST, Hong-Kong [2018]",
           "url":          "google.com"
         }
       ]
     },
     {
-      "title":            "section 3 de cv",
+      "title":            "EXHIBITIONS",
       "arrayOfProject": [
         {
-          "name":         "nom de projet 1",
+          "name":         "Jeeves at Mapping Festival, Geneva [2018]",
           "url":          "google.com"
         },
         {
-          "name":         "nom de projet 2",
+          "name":         "«Mon oeil» at George Pompidou museum , Paris [2016]",
           "url":          "google.com"
         }
       ]
