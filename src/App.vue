@@ -88,6 +88,7 @@
   import Fullpage from 'fullpage.js'
   import RIntro from "@/components/RIntro.vue"
   import FullpageSlide from "@/components/FullpageSlide.vue"
+  import {setScalingOfHtmlElementOnHeightOfHisParent} from "@/setScalingOfHtmlElementOnHeightOfHisParent"
 
   @Component({
     components: {
@@ -154,37 +155,10 @@
 
     setElementsToScalingOnScreenHeight() {
 
-      console.log("resize!!! ")
-
       const refsOfContentScalingOnScreenHeight = this.$refs["contentScalingOnScreenHeight"]
 
       if( refsOfContentScalingOnScreenHeight instanceof HTMLElement) {
-        App.setScalingOfHtmlElementOnHeightOfHisParent(refsOfContentScalingOnScreenHeight)
-      }
-    }
-
-    static setScalingOfHtmlElementOnHeightOfHisParent(htmlElementToScaling: HTMLElement) {
-
-      const parentHtmlElementOfElementToScaling = htmlElementToScaling.parentElement
-
-      if(parentHtmlElementOfElementToScaling) {
-        htmlElementToScaling.style.transform          = "none"
-        htmlElementToScaling.style.webkitTransform    = "none"
-
-        const heightOfParentHtmlElement = parentHtmlElementOfElementToScaling.getBoundingClientRect().height
-        const heightOfHtmlElementToScaling = htmlElementToScaling.getBoundingClientRect().height
-
-        console.log("parent height",    heightOfParentHtmlElement)
-        console.log("child height",     heightOfHtmlElementToScaling)
-
-        if(heightOfHtmlElementToScaling > heightOfParentHtmlElement) {
-
-          const transformPropertyValue = `scale(${heightOfParentHtmlElement / heightOfHtmlElementToScaling})`
-
-          htmlElementToScaling.style.transform          = transformPropertyValue
-          htmlElementToScaling.style.webkitTransform    = transformPropertyValue
-        }
-
+        setScalingOfHtmlElementOnHeightOfHisParent(refsOfContentScalingOnScreenHeight)
       }
     }
   }
