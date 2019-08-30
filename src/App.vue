@@ -39,18 +39,25 @@
 
             <div class="r-section-cv">
 
-                <div class="r-section-cv__item"
-                     v-for="(cvSection, index) of $arrayOfCvSection">
+                <div class="r-scaling-height">
+                    <div class="r-scaling-height__child"
+                         ref="contentScalingOnScreenHeight">
 
-                    <h4 class="r-section-cv__item__title r-font-is-uppercase r-font-l">{{cvSection.title}}</h4>
+                        <div class="r-section-cv__item"
+                             v-for="(cvSection, index) of $arrayOfCvSection">
 
-                    <ul class="r-section-cv__item__list r-list">
-                        <li class="r-list__item r-list__item--with-line"
-                            v-for="project of cvSection.arrayOfProject">
-                            <a class="r-link-no-style" :href="project.url">{{project.name}}</a>
-                        </li>
-                    </ul>
+                            <h4 class="r-section-cv__item__title r-font-is-uppercase r-font-l">{{cvSection.title}}</h4>
 
+                            <ul class="r-section-cv__item__list r-list">
+                                <li class="r-list__item r-list__item--with-line"
+                                    v-for="project of cvSection.arrayOfProject">
+                                    <a class="r-link-no-style" :href="project.url">{{project.name}}</a>
+                                </li>
+                            </ul>
+
+                        </div>
+
+                    </div>
                 </div>
 
             </div>
@@ -109,6 +116,12 @@
               this.$store.commit("setFullPageInstance", fullPageInstance)
             }
 
+            this.setElementsToScalingOnScreenHeight()
+
+            window.addEventListener("resize", () => {
+              this.setElementsToScalingOnScreenHeight()
+            })
+
           }, 500)
 
         })
@@ -137,6 +150,42 @@
 
     nextSection() {
       if (this.$store.state.fullPageInstance) this.$store.state.fullPageInstance.moveSectionDown()
+    }
+
+    setElementsToScalingOnScreenHeight() {
+
+      console.log("resize!!! ")
+
+      const refsOfContentScalingOnScreenHeight = this.$refs["contentScalingOnScreenHeight"]
+
+      if( refsOfContentScalingOnScreenHeight instanceof HTMLElement) {
+        App.setScalingOfHtmlElementOnHeightOfHisParent(refsOfContentScalingOnScreenHeight)
+      }
+    }
+
+    static setScalingOfHtmlElementOnHeightOfHisParent(htmlElementToScaling: HTMLElement) {
+
+      const parentHtmlElementOfElementToScaling = htmlElementToScaling.parentElement
+
+      if(parentHtmlElementOfElementToScaling) {
+        htmlElementToScaling.style.transform          = "none"
+        htmlElementToScaling.style.webkitTransform    = "none"
+
+        const heightOfParentHtmlElement = parentHtmlElementOfElementToScaling.getBoundingClientRect().height
+        const heightOfHtmlElementToScaling = htmlElementToScaling.getBoundingClientRect().height
+
+        console.log("parent height",    heightOfParentHtmlElement)
+        console.log("child height",     heightOfHtmlElementToScaling)
+
+        if(heightOfHtmlElementToScaling > heightOfParentHtmlElement) {
+
+          const transformPropertyValue = `scale(${heightOfParentHtmlElement / heightOfHtmlElementToScaling})`
+
+          htmlElementToScaling.style.transform          = transformPropertyValue
+          htmlElementToScaling.style.webkitTransform    = transformPropertyValue
+        }
+
+      }
     }
   }
 </script>
